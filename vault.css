@@ -1,0 +1,132 @@
+/* vault.css */
+
+/* Page Background */
+body {
+  background-color: #050508; /* Consistent with your other pages */
+}
+
+.auth-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  position: relative;
+  z-index: 10;
+}
+
+.top-bar-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.icon-btn {
+  background: none; border: none; color: var(--text-main);
+  padding: 0; cursor: pointer; display: flex;
+}
+.icon-btn svg { width: 22px; height: 22px; }
+
+.profile-avatar {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: var(--glass-bg); border: 1px solid var(--glass-border);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-sub);
+}
+.profile-avatar svg { width: 18px; height: 18px; }
+
+
+.vault-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 20px;
+}
+
+.vault-header {
+  margin-bottom: 30px;
+}
+
+.section-desc {
+  color: var(--text-sub);
+  font-size: 0.95rem;
+}
+
+/* Ensure the parent header doesn't force the gradient onto the span */
+.site-brand {
+  /* Keep your existing gradient styles here */
+  background: linear-gradient(135deg, #ffffff 0%, var(--text-sub) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block; /* This helps prevent the span from acting weird */
+}
+
+/* The purple fix */
+.brand-sub {
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-left: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  
+  /* THIS IS THE FIX */
+  background: none !important;      /* Remove the gradient background */
+  -webkit-background-clip: unset;    /* Stop clipping the background */
+  -webkit-text-fill-color: #8b5cf6 !important; /* Force the text color to purple */
+  color: #8b5cf6 !important;         /* Fallback for non-webkit browsers */
+}
+
+
+
+/* Vault Grid */
+.vault-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.vault-card {
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.05); /* var(--glass-bg) */
+  border: 1px solid rgba(255, 255, 255, 0.08); /* var(--glass-border) */
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.vault-card:hover { transform: scale(1.02); }
+
+.thumbnail-placeholder {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: #1a1a24;
+}
+
+.vault-info { padding: 12px; }
+.vault-info h3 { font-size: 0.9rem; color: #ffffff; margin-bottom: 4px; }
+.vault-info p { font-size: 0.75rem; color: #94a3b8; }
+
+
+.back-to-app-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-sub);
+  padding: 10px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  margin-bottom: 20px;
+}
+
+.back-to-app-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.back-to-app-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-main);
+}

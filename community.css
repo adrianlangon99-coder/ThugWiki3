@@ -1,0 +1,140 @@
+/* ==========================================================================
+   COMMUNITIES PAGE SPECIFIC STYLESHEET
+   ========================================================================== */
+
+/* Page Setup */
+body {
+  background-color: #050508;
+}
+
+/* Navigation Back Button Styling */
+.back-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-sub);
+  padding: 8px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+/* Back Arrow SVG Icon dimensions */
+.back-nav-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Interaction Effects */
+.back-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-main);
+  transform: translateX(-2px); /* Subtle slide left on hover */
+}
+
+.back-nav-btn:active {
+  transform: translateX(0) scale(0.95);
+}
+
+
+.communities-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.communities-header {
+  margin-bottom: 32px;
+}
+
+.section-desc {
+  color: var(--text-sub);
+  font-size: 0.95rem;
+  margin-top: 4px;
+}
+
+/* BRANDING SUBTITLE (Forces 'Community' to be Blue) */
+.brand-sub-blue {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #3b82f6 !important; /* Forces your var(--accent-blue) fallback */
+  margin-left: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  
+  /* Overrides parent text gradient layouts completely */
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: #3b82f6 !important;
+}
+
+/* Communities Grid Layout */
+.communities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* Community Forum Hub Cards */
+.community-hub-card {
+  background: var(--bg-panel);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.community-hub-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.hub-banner {
+  height: 80px;
+  width: 100%;
+}
+
+.hub-content {
+  padding: 20px;
+}
+
+.hub-content h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.hub-content p {
+  font-size: 0.85rem;
+  color: var(--text-sub);
+  margin-bottom: 18px;
+}
+
+/* Monochromatic-styled Small Join Buttons */
+.hub-btn {
+  width: 100%;
+  background: #ffffff;
+  color: #050505;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.hub-btn:hover {
+  opacity: 0.9;
+}
+
+.hub-btn:active {
+  transform: scale(0.98);
+}
